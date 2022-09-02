@@ -1,0 +1,81 @@
+<div class="row" style="margin-top:40px; padding:20px; background-color:#eff0f2;border-radius:15px;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
+  <!-- <div class="col-sm-12" style="text-align:center;">
+    Register
+  </div> -->
+
+  <div class="col-sm-12">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id"> -->
+      <!-- <div class="row">
+        <div class="input-field col s12">
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" required>
+          <label>Name :
+            <label class="red-text">*</label>
+          </label>
+        </div>
+      </div> -->
+
+      <div class="form-group">
+        <div class="input-field col s12">
+          <label for="name">Name :</label> 
+          <input type="text" class= "form-control" formControlName="name" [ngClass]="{ 'is-invalid': f.name?.errors && submitted }">
+          <div  *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">Name is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-field col s12">
+          <label for="role">Role :</label> 
+          <input type="text" class= "form-control" formControlName="role" [ngClass]="{ 'is-invalid': f.role?.errors && submitted }">
+          <div  *ngIf="submitted && f.role.errors" class="invalid-feedback">
+            <div *ngIf="f.role.errors.required">Role is required</div>
+          </div>
+        </div>
+      </div>
+    
+        <div class="form-group">
+          <div class="input-field col s12">
+            <label for="email">E-mail :</label> 
+            <input type="email" class= "form-control" formControlName="email" [ngClass]="{ 'is-invalid': f.email?.errors && submitted }">
+            <div  *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <!-- <script>console.log("Inside error block of email");</script> -->
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.pattern">
+                Invalid Email Address
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-field col s12">
+            <label for="username">Username :</label> 
+            <input type="text" class= "form-control" formControlName="username" [ngClass]="{ 'is-invalid': f.username?.errors && submitted }">
+            <div  *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">Username is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-field col s12">
+            <label for="password">Password :</label> 
+            <input type="password" class= "form-control" formControlName="password" [ngClass]="{ 'is-invalid': f.password?.errors && submitted }">
+            <div  *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+        </div>
+      
+      <div class="form-group" style="text-align:center;">
+          <button type="submit" class="btn btn-dark" [disabled]="loading">Register</button>
+          <button type="button" class="btn btn-secondary" (click)="moveToLogin()">Log in</button>
+      </div>
+    </form>
+  </div>
+</div>

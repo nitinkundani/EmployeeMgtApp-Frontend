@@ -1,0 +1,41 @@
+<div class="col s7">
+  <table class="responsive-table highlight">
+      <thead>
+        <tr>
+          <th>Employee Property</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Name</td>
+        <td >
+          <!-- <input type="text" name="name" #name="ngModel" [(ngModel)]="this.emp.name" > -->
+          {{emp.name}}
+          <!-- <input type="text" name="name" #name="ngModel" [(ngModel)]="emp.name" required> -->
+        </td>
+      </tr>
+      <tr>
+        <td>Role</td>
+        <td >
+          {{emp.role}}
+          <!-- <input type="text" name="role" #name="ngModel" [(ngModel)]="emp.role" required> -->
+          <!-- <input type="text" name="role" #name="ngModel" [(ngModel)]="employeeService.EmployeeToShow.role" > -->
+        </td>
+        
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td>
+          {{emp.username}}
+          <!-- <input type="text" name="username" #name="ngModel" [(ngModel)]="emp.username" required> -->
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td >
+          {{emp.email}}
+        </td> 
+      </tr>
+    </table>
+    <button type="button" class="btn btn-secondary" (click)="moveToHome()">Go to Home Page</button>
+</div>

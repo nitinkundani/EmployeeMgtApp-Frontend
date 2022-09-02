@@ -1,0 +1,32 @@
+<!-- <p>Date works</p> -->
+<div class="col s7">
+        
+          <table class="responsive-table highlight">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Creation date</th>
+              </tr>
+            </thead>
+
+            <tr *ngFor="let dateObj of dateList">
+              
+              <td>{{dateObj.id }}</td>
+              <td>{{dateObj.date | localeDate}}</td>
+              <!-- date: this.employeeService.selectedLocale.code -->
+              
+            </tr>
+          </table>
+
+          <div>
+            <h5>Choose Locale</h5>
+            <p-dropdown [options]="this.employeeService.locals" [(ngModel)]="this.employeeService.selectedLocale" placeholder="Select locale for dates" optionLabel="name"
+            [showClear]="false" (click)="updateSelectedLocale()"></p-dropdown>
+          </div>
+  
+            <div>
+            <button type="button" class="btn btn-secondary" (click)="moveToHome()">Go Back to Home Page</button>
+            </div>  
+          
+</div>  
+      
