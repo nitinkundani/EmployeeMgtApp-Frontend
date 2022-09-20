@@ -1,0 +1,29 @@
+<div class="row justify-content-center">
+  <div class="col-4 ">
+    
+    <div class="card">
+      <div class="card-content white-text">
+        <div class="row justify-content-center">
+          <div class="col">
+            <h5>Data: {{this.dataProvider.data}}</h5>
+
+            <p>Live Update: </p>
+            <div class="field-checkbox">
+              <p-checkbox [(ngModel)]="live" [binary]="true" inputId="binary" (click)="updateLive()"></p-checkbox>
+              <label for="binary">{{live}}</label>
+            </div>
+
+            <div>
+              <button style="margin: 5px;" type="button" class="btn btn-secondary" (click)="detectCurrentData()">Detect changes</button>
+            </div>
+
+            <div>
+              <button style="margin: 5px;" type="button" class="btn btn-secondary" (click)="moveToHome()">Go to Home Page</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

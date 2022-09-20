@@ -300,6 +300,10 @@ link.click();
       this._router.navigate(['/date']);
     }
 
+    moveToChangeDetectionDemo(){
+      this._router.navigate(['/change-detection']);
+    }
+
     updateSelectedLocale(){
       // console.log("Inside updateSelectedLocal function");
       // console.log("selectedLocale inside updateSelectedLocale: "+this.selectedLocale.name);

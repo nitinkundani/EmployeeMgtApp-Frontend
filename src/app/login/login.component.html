@@ -6,7 +6,7 @@ box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
     <h5>Login</h5>
   </div>
 
-  <div class="col-md-6 offset-md-3">
+  <!-- <div class="col-md-6 offset-md-3"> -->
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
       <div class="form-group">
@@ -52,10 +52,10 @@ box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
        -->
 
       <div class="form-group" style="text-align:center;">
-          <button type="submit"  [disabled]="loading"  class="btn btn-dark">Log in</button>
+          <button type="submit"  class="btn btn-dark">Log in</button>
           <button type="button" class="btn btn-secondary" (click)="moveToRegister()">Register</button>
       </div>    
       <!-- <p>{{loginForm.valid}} </p> -->
     </form>
-  </div>
+  <!-- </div> -->
 </div>

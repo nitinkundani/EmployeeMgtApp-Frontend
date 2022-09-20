@@ -18,10 +18,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { RegisterLoginService } from './shared/register-login.service';
 import { EmployeeService } from './shared/employee.service';
 import { NotificationService } from './shared/notification.service';
+import { DataProviderService } from './shared/data-provider.service';
 //import { environment } from '../environments/environment';
 
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { AuthGuard } from './auth/auth.guard';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 
 // import { DateComponent } from './date/date.component';
 // import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
@@ -35,6 +37,8 @@ const routes: Routes = [
   {path:'home',loadChildren:'./employee/employee.module#EmployeeModule'}, 
   {path:'employee/:username',loadChildren:'./employee-details/employee-details.module#EmployeeDetailsModule'},
   {path:'date',loadChildren:'./date/date.module#DateModule'}, 
+  {path:'change-detection',loadChildren:'./change-detection/change-detection.module#ChangeDetectionModule'}, 
+
 ];
 
 export let AppInjector : Injector;
@@ -42,6 +46,7 @@ export let AppInjector : Injector;
 @NgModule({
   declarations: [
     AppComponent,
+    // ChangeDetectionComponent,
     // myDatePipe
     // DateComponent,
     // EmployeeComponent,
@@ -63,7 +68,7 @@ export let AppInjector : Injector;
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }, AuthGuard, EmployeeService, NotificationService, DatePipe],
+  }, AuthGuard, EmployeeService, NotificationService, DatePipe, DataProviderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

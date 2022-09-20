@@ -33,13 +33,13 @@ input.ng-invalid.ng-dirty{
 .btn-custom,.btn-custom:hover,.btn-custom:focus{
     background-color: transparent;
     font-size: 1.1rem;
-    margin : 0px 5px;
+    margin : 10px;
     border: #fff solid 1px ;
     text-transform:none;
 }
 
 div.card{
-    background-color : #083045;
+    background-color : #0b3650;
     border-radius: 10px;
 }
 
@@ -63,6 +63,14 @@ a.action-btn:hover{
     bottom: 10%;
     left:7%;
   }
+
+  /* button.button {
+    margin: 50 px
+    }
+
+    .btn {
+        margin: 30 px
+    } */
 
   /* "styles": [
   "node_modules/primeng/resources/themes/saga-blue/theme.css",
