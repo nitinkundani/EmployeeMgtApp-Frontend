@@ -16,7 +16,9 @@ emp: Employee = {
   username: "",
   name: "",
   role: "",
-  password: ""
+  password: "",
+  dob: undefined,
+  salary: 0
 }
 
   constructor(private employeeService: EmployeeService, private router: Router) { 

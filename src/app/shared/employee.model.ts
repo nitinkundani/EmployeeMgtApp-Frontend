@@ -5,5 +5,6 @@ export class Employee {
     name: string ;
     role: string ;
     password: string ;
-    //salary: number;
+    dob: Date;
+    salary: number;
 }

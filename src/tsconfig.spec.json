@@ -4,11 +4,14 @@
     "outDir": "../out-tsc/spec",
     "module": "commonjs",
     "types": [
-      "jasmine",
+      
       "node", 
       "jest"
-    ]
+    ],
+    "esModuleInterop": true,
+    "experimentalDecorators": true
   },
+
   "files": [
     "test.ts",
     "polyfills.ts"

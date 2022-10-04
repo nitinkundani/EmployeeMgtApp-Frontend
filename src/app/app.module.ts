@@ -24,6 +24,7 @@ import { DataProviderService } from './shared/data-provider.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { AuthGuard } from './auth/auth.guard';
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import {TableModule} from 'primeng/table';
 
 // import { DateComponent } from './date/date.component';
 // import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
@@ -62,6 +63,7 @@ export let AppInjector : Injector;
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes), 
+    TableModule
     // myDatePipe
   ],
   providers: [{

@@ -48,6 +48,8 @@ export class EmployeeService {
     name: "",
     role: "",
     password: "",
+    dob: undefined,
+    salary: 0
 };
   employees: Employee [];
 
@@ -79,7 +81,9 @@ export class EmployeeService {
       username: "",
       name: "",
       role: "",
-      password: ""
+      password: "",
+      dob: undefined,
+      salary: 0
     }
 
     this.locals= [
@@ -277,7 +281,9 @@ export class EmployeeService {
       username: "",
       name: "",
       role: "",
-      password: ""
+      password: "",
+      dob: undefined,
+      salary: 0
     }
   }
 

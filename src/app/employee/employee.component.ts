@@ -37,7 +37,9 @@ export class EmployeeComponent implements OnInit {
     username: "",
     name: "",
     role: "",
-    password: ""
+    password: "",
+    dob: undefined,
+    salary: 0
   };
   employeeList: Employee[];
   // cols: any[];
@@ -125,6 +127,8 @@ export class EmployeeComponent implements OnInit {
       name: "",
       role: "",
       password: "",
+      dob: undefined,
+      salary: 0
       //salary: null
     }
   }
